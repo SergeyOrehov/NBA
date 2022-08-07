@@ -2,7 +2,7 @@ import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 
-import nbaReducer from "./teams/reducer";
+import nbaReducer from "./players/reducer";
 
 const rootReducer = combineReducers({ nbaReducer });
 

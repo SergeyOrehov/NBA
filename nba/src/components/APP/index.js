@@ -1,13 +1,10 @@
-import React from "react";
-
-import Teams from "components/Teams";
+import Teams from "components/Player";
 
 import "./styles.scss";
 
 const App = () => {
   return (
     <div className="App">
-      <h1>NBA</h1>
       <Teams />
     </div>
   );

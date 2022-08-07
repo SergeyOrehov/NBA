@@ -1,14 +1,13 @@
-import React, { Dispatch, useEffect } from "react";
+import { useEffect } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
-import { loadTeams } from "store/teams/actions";
-import { selectTeams } from "store/teams/selectors";
+import { loadTeams } from "store/players/actions";
+import { selectTeams } from "store/players/selectors";
 
-import TeamDetails from "components/TeamDetail";
+import TeamDetails from "components/PlayerDetail";
 import { IPlayer } from "types/IPlayer";
-import { AnyAction } from "redux";
 
-const Teams = () => {
+const Player = () => {
   const dispatch = useDispatch<any>();
   const teamsList = useSelector(selectTeams);
   useEffect(() => {
@@ -29,4 +28,4 @@ const Teams = () => {
   );
 };
 
-export default Teams;
+export default Player;
