@@ -4,10 +4,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { loadTeams } from "store/players/actions";
 import { selectTeams } from "store/players/selectors";
 
-import TeamDetails from "components/PlayerDetail";
+import PlayerDetails from "components/PlayerDetails";
 import { IPlayer } from "types/IPlayer";
 
-const Player = () => {
+import "./styles.scss";
+
+const Players = () => {
   const dispatch = useDispatch<any>();
   const teamsList = useSelector(selectTeams);
   useEffect(() => {
@@ -16,10 +18,10 @@ const Player = () => {
   return (
     <section className="mainPage">
       <div className="container">
-        <div className="listMoviesMainPage">
+        <div className="listPlayers">
           {teamsList.length > 0
             ? teamsList.map((item: IPlayer) => (
-                <TeamDetails key={item.id} item={item} />
+                <PlayerDetails key={item.id} item={item} />
               ))
             : null}
         </div>
@@ -28,4 +30,4 @@ const Player = () => {
   );
 };
 
-export default Player;
+export default Players;

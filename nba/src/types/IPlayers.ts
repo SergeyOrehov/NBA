@@ -1,5 +1,5 @@
 import { IPlayer } from "./IPlayer";
 
-export interface ITeam {
+export interface IPlayers {
   list: IPlayer[];
 }

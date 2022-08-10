@@ -1,6 +1,6 @@
 import axios, { AxiosResponse, AxiosRequestConfig } from "axios";
 
-const getTeams = (): Promise<AxiosResponse> => {
+const getPlayers = (): Promise<AxiosResponse> => {
   const options: AxiosRequestConfig = {
     method: "GET",
     url: "https://free-nba.p.rapidapi.com/players",
@@ -13,4 +13,4 @@ const getTeams = (): Promise<AxiosResponse> => {
   return axios.request(options);
 };
 
-export default getTeams;
+export default getPlayers;

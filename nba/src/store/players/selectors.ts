@@ -1,3 +1,4 @@
-import { ITeam } from "types/ITeam";
-export const selectTeams = (state: { nbaReducer: ITeam }): ITeam["list"] =>
-  state.nbaReducer.list;
+import { IPlayers } from "types/IPlayers";
+export const selectTeams = (state: {
+  nbaReducer: IPlayers;
+}): IPlayers["list"] => state.nbaReducer.list;

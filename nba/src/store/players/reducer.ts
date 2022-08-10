@@ -1,10 +1,10 @@
 import { AnyAction } from "redux";
-import { ITeam } from "types/ITeam";
+import { IPlayers } from "types/IPlayers";
 const initialState = {
   list: [],
 };
 
-const nbaReducer = (state: ITeam = initialState, action: AnyAction) => {
+const nbaReducer = (state: IPlayers = initialState, action: AnyAction) => {
   switch (action.type) {
     case "team/setTeam":
       return { ...state, list: [...action.payload] };

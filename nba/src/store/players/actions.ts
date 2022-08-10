@@ -1,9 +1,8 @@
 import { Dispatch } from "redux";
+import getPlayers from "services/getPlayers";
+import { IPlayers } from "types/IPlayers";
 
-import getTeams from "services/getTeams";
-import { ITeam } from "types/ITeam";
-
-export const setTeamsAction = (list: ITeam["list"]) => {
+export const setTeamsAction = (list: IPlayers["list"]) => {
   return {
     type: "team/setTeam",
     payload: list,
@@ -12,7 +11,7 @@ export const setTeamsAction = (list: ITeam["list"]) => {
 
 export const loadTeams = () => async (dispatch: Dispatch) => {
   try {
-    const response = await getTeams();
+    const response = await getPlayers();
     dispatch(setTeamsAction(response.data.data));
   } catch (e) {
     console.log(e, "Произошла ошибка");
